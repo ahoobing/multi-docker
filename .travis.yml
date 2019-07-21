@@ -13,7 +13,7 @@ after_success:
   - docker build -t ahoobing/multi-client ./client
   - docker build -t ahoobing/multi-nginx ./nginx
   - docker build -t ahoobing/multi-server ./server
-  - docker buidl -t ahoobing/multi-worker ./worker
+  - docker build -t ahoobing/multi-worker ./worker
 
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
   - docker push ahoobing/multi-client
